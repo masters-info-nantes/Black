@@ -11,13 +11,13 @@
         path="app/users.js">
       <moduleElements
           xsi:type="angular:ESClass"
-          name="NewUser"/>
-      <moduleElements
-          xsi:type="angular:ESClass"
           name="Users"/>
       <moduleElements
           xsi:type="angular:ESClass"
           name="User"/>
+      <moduleElements
+          xsi:type="angular:ESClass"
+          name="NewUser"/>
       <moduleElements
           xsi:type="angular:ESClass"
           name="UpdateUser"/>
