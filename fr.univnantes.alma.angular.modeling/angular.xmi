@@ -4,11 +4,13 @@
     <modules path="app/users.js">
       <moduleElements xsi:type="angular:ESClass" name="Users"/>
       <moduleElements xsi:type="angular:ESClass" name="User"/>
-      <moduleElements xsi:type="angular:ESClass" name="NewUser"/>
-      <moduleElements xsi:type="angular:ESClass" name="UpdateUser"/>
-      <moduleElements xsi:type="angular:ESClass" extends="//@folders.0/@modules.0/@moduleElements.3" abstract="true"/>
+      <moduleElements xsi:type="angular:ESClass" name="NewUser" extends="//@folders.0/@modules.0/@moduleElements.1">
+        <fields name="newField" type="String"/>
+        <functions name="newFunction" type="String"/>
+      </moduleElements>
       <moduleElements xsi:type="angular:ESClass"/>
       <moduleElements xsi:type="angular:ESClass"/>
+      <moduleElements xsi:type="angular:ESClass" name="Qgqdfgqdfg"/>
     </modules>
     <modules path="app/common.js"/>
   </folders>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="angular" version="10.1.0.201507271600">
   <ownedViewpoints name="Architecture" modelFileExtension="xmi">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CLass Diagramme" domainClass="angular.Module" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Class Diagram" domainClass="angular.Module" enablePopupBars="true">
       <metamodel href="../../fr.univnantes.alma.angular/model/angular.ecore#/"/>
-      <defaultLayer name="Class Diagramme">
-        <edgeMappings name="Extends" sourceMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']" targetMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']" targetFinderExpression="feature:extends">
+      <defaultLayer name="Default">
+        <edgeMappings name="Extends" deletionDescription="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='extends']" sourceMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']" targetMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']" targetFinderExpression="feature:extends">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -12,7 +12,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="CD_Class" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@toolSections.1/@ownedTools[name='Classifier%20Direct%20Edit']" domainClass="angular.ESClass" childrenPresentation="List">
+        <containerMappings name="CD_Class" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Classifier%20Direct%20Edit']" domainClass="angular.ESClass" childrenPresentation="List">
           <subNodeMappings name="CD_Field" semanticCandidatesExpression="feature:fields" domainClass="angular.Field">
             <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -41,7 +41,7 @@
           </conditionnalStyles>
         </containerMappings>
         <toolSections name="Elements">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="New ESClass" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="New ESClass" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -52,7 +52,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Field" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Field']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Field" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Field']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -64,7 +64,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Function" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Function']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Function" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Function']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -76,7 +76,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Extends" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@edgeMappings[name='Extends']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Extends" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='Extends']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -84,6 +84,16 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="extends" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="extends" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="extends"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
