@@ -6,7 +6,9 @@
       <moduleElements xsi:type="angular:ESClass" name="User"/>
       <moduleElements xsi:type="angular:ESClass" name="NewUser"/>
       <moduleElements xsi:type="angular:ESClass" name="UpdateUser"/>
-      <moduleElements xsi:type="angular:ESClass" name="wfwf"/>
+      <moduleElements xsi:type="angular:ESClass" extends="//@folders.0/@modules.0/@moduleElements.3" abstract="true"/>
+      <moduleElements xsi:type="angular:ESClass"/>
+      <moduleElements xsi:type="angular:ESClass"/>
     </modules>
     <modules path="app/common.js"/>
   </folders>

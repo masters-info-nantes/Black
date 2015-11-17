@@ -1,18 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="angular" version="10.1.0.201507271600">
   <ownedViewpoints name="Architecture" modelFileExtension="xmi">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Diagramme" domainClass="angular.Module" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CLass Diagramme" domainClass="angular.Module" enablePopupBars="true">
       <metamodel href="../../fr.univnantes.alma.angular/model/angular.ecore#/"/>
-      <defaultLayer name="Default">
-        <containerMappings name="CD_Class" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Diagramme']/@defaultLayer/@toolSections.1/@ownedTools[name='Classifier%20Direct%20Edit']" domainClass="angular.ESClass" childrenPresentation="List">
+      <defaultLayer name="Class Diagramme">
+        <edgeMappings name="Extends" sourceMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']" targetMapping="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']" targetFinderExpression="feature:extends">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="CD_Class" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@toolSections.1/@ownedTools[name='Classifier%20Direct%20Edit']" domainClass="angular.ESClass" childrenPresentation="List">
+          <subNodeMappings name="CD_Field" semanticCandidatesExpression="feature:fields" domainClass="angular.Field">
+            <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="CD_Function" semanticCandidatesExpression="feature:functions" domainClass="angular.Function">
+            <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            </style>
+          </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" borderSizeComputationExpression="1" roundedCorner="true" widthComputationExpression="15" heightComputationExpression="12" backgroundColor="//@userColorsPalettes[name='Default%20Colors']/@entries[name='Default%20Class']">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
+          <conditionnalStyles predicateExpression="feature:abstract">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" borderSizeComputationExpression="1" roundedCorner="true" widthComputationExpression="15" heightComputationExpression="12" backgroundColor="//@userColorsPalettes[name='Default%20Colors']/@entries[name='Abstract%20Class']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </conditionnalStyles>
         </containerMappings>
         <toolSections name="Elements">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="New ESClass" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="New ESClass" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -20,6 +49,41 @@
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.ESClass" referenceName="moduleElements">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="NewClass"/>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Field" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Field']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Field" referenceName="fields">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newField"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="String"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="New Function" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Function']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Function" referenceName="functions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newFunction"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="String"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Extends" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='CLass%20Diagramme']/@defaultLayer/@edgeMappings[name='Extends']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="extends" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -38,5 +102,6 @@
   </ownedViewpoints>
   <userColorsPalettes name="Default Colors">
     <entries xsi:type="description:UserFixedColor" red="210" green="228" blue="252" name="Default Class"/>
+    <entries xsi:type="description:UserFixedColor" red="240" green="216" blue="216" name="Abstract Class"/>
   </userColorsPalettes>
 </description:Group>
